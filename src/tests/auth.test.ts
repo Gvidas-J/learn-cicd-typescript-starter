@@ -1,10 +1,14 @@
-import { describe, expect, test } from "vitest";
+import { expect, test } from "vitest";
 import { getAPIKey } from "../api/auth.js";
 import { IncomingHttpHeaders } from "http";
 
-const wrong: IncomingHttpHeaders = { authorization: "alpha bravo charlie delta" };
+const wrong: IncomingHttpHeaders = {
+  authorization: "alpha bravo charlie delta",
+};
 const wronglength: IncomingHttpHeaders = { authorization: "alpha" };
-const working: IncomingHttpHeaders = { authorization: "ApiKey password123 charlie delta" };
+const working: IncomingHttpHeaders = {
+  authorization: "ApiKey password123 charlie delta",
+};
 
 test("working", () => {
   expect(getAPIKey(working)).toBe("password123");

@@ -4,6 +4,8 @@
   "type": "module",
   "main": "dist/main.js",
   "scripts": {
+    "format:write": "prettier --write \"src/**/*.{js,ts,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,json,css,md}\"",
     "test": "vitest --run",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
@@ -29,6 +31,7 @@
     "@types/node": "^22.9.0",
     "drizzle-kit": "^0.28.1",
     "globals": "^15.12.0",
+    "prettier": "3.8.3",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },
