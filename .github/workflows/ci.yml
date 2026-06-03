@@ -41,7 +41,7 @@ jobs:
         run: npm ci
 
       - name: Run lint
-        run: npm run lint
+        run: npm run lint -- --max-warnings=0
 
       - name: Run format check
-        run: npm run format:check -- --max-warnings=0
+        run: npm run format:check
