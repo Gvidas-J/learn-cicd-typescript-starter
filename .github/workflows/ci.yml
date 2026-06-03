@@ -44,4 +44,4 @@ jobs:
         run: npm run lint
 
       - name: Run format check
-        run: npm run format:check
+        run: npm run format:check -- --max-warnings=0
